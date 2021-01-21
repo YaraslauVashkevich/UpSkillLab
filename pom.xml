@@ -12,6 +12,7 @@
     <module>git</module>
     <module>maven</module>
     <module>junit</module>
+      <module>logging</module>
   </modules>
 
   <name>upskill-lab</name>
