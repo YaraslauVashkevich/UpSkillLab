@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.epam.upskill.MainTest" time="0.055" tests="8" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.epam.upskill.MainTest" time="0.047" tests="8" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="14"/>
     <property name="sun.cpu.isalist" value="amd64"/>
     <property name="sun.jnu.encoding" value="Cp1251"/>
-    <property name="java.class.path" value="E:\Workspace\upskill-lab\junit\target\test-classes;E:\Workspace\upskill-lab\junit\target\classes;C:\Users\Admin\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Admin\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.class.path" value="E:\Workspace\upskill-lab\junit\target\test-classes;E:\Workspace\upskill-lab\junit\target\classes;C:\Users\Admin\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Admin\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Admin\.m2\repository\org\apache\logging\log4j\log4j-api\2.14.0\log4j-api-2.14.0.jar;C:\Users\Admin\.m2\repository\org\apache\logging\log4j\log4j-core\2.14.0\log4j-core-2.14.0.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="user.variant" value=""/>
@@ -15,9 +15,9 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-14.0.2\bin"/>
-    <property name="sun.java.command" value="C:\Users\Admin\AppData\Local\Temp\surefire11298683574307221116\surefirebooter6004545045106264684.jar C:\Users\Admin\AppData\Local\Temp\surefire11298683574307221116 2021-01-21T19-24-04_856-jvmRun1 surefire18353291889009514232tmp surefire_212669674700782529054tmp"/>
+    <property name="sun.java.command" value="C:\Users\Admin\AppData\Local\Temp\surefire7392584565809731736\surefirebooter2393075630512257861.jar C:\Users\Admin\AppData\Local\Temp\surefire7392584565809731736 2021-01-26T12-31-05_340-jvmRun1 surefire15441466928063930244tmp surefire_24035364919410710367tmp"/>
     <property name="jdk.debug" value="release"/>
-    <property name="surefire.test.class.path" value="E:\Workspace\upskill-lab\junit\target\test-classes;E:\Workspace\upskill-lab\junit\target\classes;C:\Users\Admin\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Admin\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="surefire.test.class.path" value="E:\Workspace\upskill-lab\junit\target\test-classes;E:\Workspace\upskill-lab\junit\target\classes;C:\Users\Admin\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\Admin\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\Admin\.m2\repository\org\apache\logging\log4j\log4j-api\2.14.0\log4j-api-2.14.0.jar;C:\Users\Admin\.m2\repository\org\apache\logging\log4j\log4j-core\2.14.0\log4j-core-2.14.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Admin"/>
     <property name="user.language" value="ru"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\Admin\AppData\Local\Temp\surefire11298683574307221116\surefirebooter6004545045106264684.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\Admin\AppData\Local\Temp\surefire7392584565809731736\surefirebooter2393075630512257861.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="14.0.2+12-46"/>
@@ -56,12 +56,12 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="58.0"/>
   </properties>
-  <testcase name="equationsNotShouldHaveZerroInCoefficientA" classname="com.epam.upskill.MainTest" time="0.008"/>
+  <testcase name="equationsNotShouldHaveZerroInCoefficientA" classname="com.epam.upskill.MainTest" time="0.002"/>
   <testcase name="equationsShouldHaveTwoZerroInCoefficientBAndC" classname="com.epam.upskill.MainTest" time="0"/>
   <testcase name="equationsShouldHaveOneZerroInCoefficientC" classname="com.epam.upskill.MainTest" time="0"/>
   <testcase name="equationsShouldNotHaveRoots" classname="com.epam.upskill.MainTest" time="0"/>
   <testcase name="equationsShouldHaveOneZerroInCoefficientBSquareXPositive" classname="com.epam.upskill.MainTest" time="0"/>
-  <testcase name="equationsShouldHaveOneZerroInCoefficientBSquareXNegative" classname="com.epam.upskill.MainTest" time="0"/>
+  <testcase name="equationsShouldHaveOneZerroInCoefficientBSquareXNegative" classname="com.epam.upskill.MainTest" time="0.001"/>
   <testcase name="equationsShouldHaveTwoRoots" classname="com.epam.upskill.MainTest" time="0"/>
   <testcase name="equationsShouldHaveOneRoots" classname="com.epam.upskill.MainTest" time="0"/>
 </testsuite>

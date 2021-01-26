@@ -1,5 +1,9 @@
 package com.epam.upskill;
 
+import org.apache.logging.log4j.Level;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import javax.swing.*;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -7,7 +11,9 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class Main {
+    static Logger logger = LogManager.getLogger();
     public static void main(String[] args) {
+        logger.log(Level.INFO, "The application is running.");
 
         JFileChooser choiceFile = new JFileChooser();
         choiceFile.setDialogTitle("Open file configuration");
@@ -15,6 +21,7 @@ public class Main {
         if (selected == JFileChooser.APPROVE_OPTION) {
             File selectFile = choiceFile.getSelectedFile();
             String path = selectFile.getAbsolutePath();
+            logger.log(Level.INFO, "The configuration file is selected.");
 
             StringBuilder suffix = new StringBuilder();
             try {
@@ -27,9 +34,12 @@ public class Main {
                 in.close();
             } catch (FileNotFoundException e) {
                 JOptionPane.showMessageDialog(null, "Configuration file not found!");
+                logger.log(Level.ERROR, "Configuration file not found.", e);
             } catch (IOException e) {
                 JOptionPane.showMessageDialog(null, "Error!");
+                logger.log(Level.ERROR, "Error file.", e);
             }
+            logger.log(Level.INFO, "The configuration file is read.");
 
             JFileChooser choiceDirectory = new JFileChooser();
             choiceDirectory.setDialogTitle("Open directory");
@@ -38,6 +48,7 @@ public class Main {
             if (result == JFileChooser.APPROVE_OPTION) {
                 File selectDirectory = choiceDirectory.getSelectedFile();
                 String pathDirectory = selectDirectory.getAbsolutePath();
+                logger.log(Level.INFO, "Directory selected.");
 
                 File directory = new File(pathDirectory);
                 File[] files = directory.listFiles();
@@ -51,7 +62,9 @@ public class Main {
                         System.out.println(name + " --> " + newName);
                     }
                 }
+                logger.log(Level.INFO, "Renaming completed.");
             }
         }
+        logger.log(Level.INFO, "The application is finished.");
     }
 }
