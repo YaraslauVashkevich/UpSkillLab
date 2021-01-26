@@ -2,7 +2,7 @@ package com.epam.upskill;
 
 import javax.swing.JOptionPane;
 
-public class Main {
+public class Git {
     public static void main(String[] args) {
         for (; ; ) {
             String in = JOptionPane.showInputDialog(null, "Input name:");

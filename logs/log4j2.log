@@ -16,3 +16,11 @@
 26.01.2021 12:32:23 [main]  INFO  upskill.Main : 51 - Directory selected.
 26.01.2021 12:32:23 [main]  INFO  upskill.Main : 65 - Renaming completed.
 26.01.2021 12:32:23 [main]  INFO  upskill.Main : 68 - The application is finished.
+27.01.2021 02:06:06 [main]  INFO  upskill.Logging : 16 - The application is running.
+27.01.2021 02:06:11 [main]  INFO  upskill.Logging : 68 - The application is finished.
+27.01.2021 02:10:45 [main]  INFO  upskill.Logging : 16 - The application is running.
+27.01.2021 02:10:53 [main]  INFO  upskill.Logging : 24 - The configuration file is selected.
+27.01.2021 02:10:53 [main]  INFO  upskill.Logging : 42 - The configuration file is read.
+27.01.2021 02:11:02 [main]  INFO  upskill.Logging : 51 - Directory selected.
+27.01.2021 02:11:02 [main]  INFO  upskill.Logging : 65 - Renaming completed.
+27.01.2021 02:11:02 [main]  INFO  upskill.Logging : 68 - The application is finished.
