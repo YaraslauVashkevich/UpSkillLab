@@ -6,7 +6,7 @@ package com.epam.upskill;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Main {
+public class Junit {
     public static void main(String[] args) {
         double a = enterFromConsole("Input coefficient a");
         double b = enterFromConsole("Input coefficient b");
