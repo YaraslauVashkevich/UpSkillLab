@@ -13,6 +13,7 @@
     <module>maven</module>
     <module>junit</module>
       <module>logging</module>
+      <module>xml</module>
   </modules>
 
   <name>upskill-lab</name>
