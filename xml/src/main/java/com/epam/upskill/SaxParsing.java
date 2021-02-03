@@ -10,12 +10,14 @@ public class SaxParsing extends DefaultHandler {
     public String getSuffix() {
         return suffix;
     }
+
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) {
         if (qName.equalsIgnoreCase("suffix")) {
             tag = true;
         }
     }
+
     @Override
     public void characters(char ch[], int start, int length) {
         if (tag) {

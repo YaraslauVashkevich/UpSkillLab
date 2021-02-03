@@ -12,6 +12,7 @@ import java.io.IOException;
 
 public class Logging {
     private static Logger logger = LogManager.getLogger();
+
     public static void main(String[] args) {
         logger.log(Level.INFO, "The application is running.");
 

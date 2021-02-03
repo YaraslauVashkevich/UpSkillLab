@@ -11,6 +11,7 @@ import java.util.Date;
 
 public class Xml {
     private static Logger logger = LogManager.getLogger();
+    private static final String DATE_FORMAT = "dd.MM.yyyy HH:mm:ss";
 
     public static void main(String[] args) {
         logger.log(Level.INFO, "The application is running.");
@@ -26,12 +27,10 @@ public class Xml {
             File selectFile = choiceFile.getSelectedFile();
             String path = selectFile.getAbsolutePath();
             nameConfig = selectFile.getName();
-            logger.log(Level.INFO, "The configuration file is selected.");
+            logger.log(Level.INFO, "The configuration file [" + nameConfig + "] is selected.");
 
             XmlParsing xmlParsing = new XmlParsing();
-            //String suffix = xmlParsing.getSuffix(path);
-            //String suffix = xmlParsing.getSuffixDom(path);
-            String suffix = xmlParsing.getSuffixSax(path);
+            String suffix = xmlParsing.getSuffixDom(path, nameConfig);
 
             JFileChooser choiceDirectory = new JFileChooser();
             choiceDirectory.setDialogTitle("Open directory");
@@ -40,7 +39,7 @@ public class Xml {
             if (result == JFileChooser.APPROVE_OPTION) {
                 File selectDirectory = choiceDirectory.getSelectedFile();
                 String pathDirectory = selectDirectory.getAbsolutePath();
-                logger.log(Level.INFO, "Directory selected.");
+                logger.log(Level.INFO, "Directory [" + pathDirectory + "] selected.");
 
                 File directory = new File(pathDirectory);
                 File[] files = directory.listFiles();
@@ -61,7 +60,7 @@ public class Xml {
         String oldFiles = new String(oldFile);
         String newFiles = new String(newFile);
         Date data = new Date();
-        SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy HH:mm:ss");
+        SimpleDateFormat format = new SimpleDateFormat(DATE_FORMAT);
         leadTime = format.format(data);
         XmlSave xmlSave = new XmlSave();
         xmlSave.xmlSave(nameConfig, leadTime, oldFiles, newFiles);

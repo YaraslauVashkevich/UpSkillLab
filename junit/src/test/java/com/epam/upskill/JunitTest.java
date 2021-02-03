@@ -23,30 +23,35 @@ public class JunitTest {
         actual = Junit.equation(-1, -2, 15); // (a, b, c)
         Assert.assertEquals(expected, actual);
     }
+
     @Test
     public void equationsShouldHaveOneRoots() {
         expected.add(-6.0); // X
         actual = Junit.equation(1, 12, 36); // (a, b, c)
         Assert.assertEquals(expected, actual);
     }
+
     @Test
     public void equationsShouldNotHaveRoots() {
         expected.isEmpty(); // X
         actual = Junit.equation(5, 3, 7); // (a, b, c)
         Assert.assertEquals(expected, actual);
     }
+
     @Test
     public void equationsShouldHaveTwoZerroInCoefficientBAndC() {
         expected.add(0.0); // X
         actual = Junit.equation(1, 0, 0); // (a, b, c)
         Assert.assertEquals(expected, actual);
     }
+
     @Test
     public void equationsNotShouldHaveZerroInCoefficientA() {
         expected.isEmpty(); // X
         actual = Junit.equation(0, -2, 1); // (a, b, c)
         Assert.assertEquals(expected, actual);
     }
+
     @Test
     public void equationsShouldHaveOneZerroInCoefficientC() {
         expected.add(0.0); // X1
@@ -54,12 +59,14 @@ public class JunitTest {
         actual = Junit.equation(1, -7, 0); // (a, b, c)
         Assert.assertEquals(expected, actual);
     }
+
     @Test
     public void equationsShouldHaveOneZerroInCoefficientBSquareXNegative() {
         expected.isEmpty(); // X
         actual = Junit.equation(5, 0, 30); // (a, b, c)
         Assert.assertEquals(expected, actual);
     }
+
     @Test
     public void equationsShouldHaveOneZerroInCoefficientBSquareXPositive() {
         expected.add(1.5); // X1

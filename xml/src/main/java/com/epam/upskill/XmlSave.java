@@ -19,6 +19,7 @@ import java.io.FileWriter;
 
 public class XmlSave {
     private static Logger logger = LogManager.getLogger();
+
     public void xmlSave(String nameConfig, String leadTime, String oldFile, String newFile) {
         try {
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
@@ -62,13 +63,12 @@ public class XmlSave {
         } catch (Exception e) {
             logger.log(Level.ERROR, "The XML file is not created", e);
         }
-        logger.log(Level.INFO, "XML file is created.");
+        logger.log(Level.INFO, "File [resultDom.xml] is created.");
     }
 
     public void xmlSaveStax(String nameConfig, String leadTime, String oldFile, String newFile) {
         try {
             XMLOutputFactory outputFactory = XMLOutputFactory.newInstance();
-            //XMLStreamWriter writer = outputFactory.createXMLStreamWriter(System.out);
             FileWriter fileWriter = new FileWriter("src\\main\\resources\\resultStax.xml");
             XMLStreamWriter writer = outputFactory.createXMLStreamWriter(fileWriter);
 
@@ -96,10 +96,10 @@ public class XmlSave {
             writer.writeEndDocument();
             writer.flush();
             writer.close();
-        }catch (Exception e) {
+        } catch (Exception e) {
             logger.log(Level.ERROR, "The XML file is not created", e);
         }
-        logger.log(Level.INFO, "XML file is created.");
+        logger.log(Level.INFO, "File [resultStax.xml] is created.");
     }
 }
 
