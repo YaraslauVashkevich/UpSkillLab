@@ -13,7 +13,7 @@ public class SaxParsing extends DefaultHandler {
 
     @Override
     public void startElement(String uri, String localName, String qName, Attributes attributes) {
-        if (qName.equalsIgnoreCase("suffix")) {
+        if (qName.equalsIgnoreCase(Constant.SUFFIX)) {
             tag = true;
         }
     }

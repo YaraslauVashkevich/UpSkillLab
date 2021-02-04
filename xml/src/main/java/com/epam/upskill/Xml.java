@@ -11,7 +11,6 @@ import java.util.Date;
 
 public class Xml {
     private static Logger logger = LogManager.getLogger();
-    private static final String DATE_FORMAT = "dd.MM.yyyy HH:mm:ss";
 
     public static void main(String[] args) {
         logger.log(Level.INFO, "The application is running.");
@@ -60,7 +59,7 @@ public class Xml {
         String oldFiles = new String(oldFile);
         String newFiles = new String(newFile);
         Date data = new Date();
-        SimpleDateFormat format = new SimpleDateFormat(DATE_FORMAT);
+        SimpleDateFormat format = new SimpleDateFormat(Constant.DATE_FORMAT);
         leadTime = format.format(data);
         XmlSave xmlSave = new XmlSave();
         xmlSave.xmlSave(nameConfig, leadTime, oldFiles, newFiles);

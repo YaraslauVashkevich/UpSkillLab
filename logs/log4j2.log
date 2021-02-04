@@ -142,3 +142,27 @@
 03.02.2021 23:57:25 [main] INFO upskill.XmlSave : 66 - File [resultDom.xml] is created.
 03.02.2021 23:57:25 [main] INFO upskill.XmlSave : 102 - File [resultStax.xml] is created.
 03.02.2021 23:57:25 [main] INFO upskill.Xml : 67 - The application is finished.
+04.02.2021 15:27:56 [main] INFO upskill.Xml : 16 - The application is running.
+04.02.2021 15:28:08 [main] INFO upskill.Xml : 29 - The configuration file [config.xml] is selected.
+04.02.2021 15:28:08 [main] INFO upskill.XmlParsing : 79 - The configuration file [config.xml] is read.
+04.02.2021 15:28:16 [main] INFO upskill.Xml : 41 - Directory [D:\test\file] selected.
+04.02.2021 15:28:16 [main] INFO upskill.Xml : 56 - Renaming completed.
+04.02.2021 15:28:16 [main] INFO upskill.XmlSave : 70 - File [resultDom.xml] is created.
+04.02.2021 15:28:16 [main] INFO upskill.XmlSave : 106 - File [resultStax.xml] is created.
+04.02.2021 15:28:16 [main] INFO upskill.Xml : 67 - The application is finished.
+04.02.2021 15:30:55 [main] INFO upskill.Xml : 16 - The application is running.
+04.02.2021 15:31:20 [main] INFO upskill.Xml : 29 - The configuration file [config.xml] is selected.
+04.02.2021 15:31:20 [main] INFO upskill.XmlParsing : 96 - The configuration file [config.xml] is read.
+04.02.2021 15:31:35 [main] INFO upskill.Xml : 41 - Directory [C:\test\file] selected.
+04.02.2021 15:31:35 [main] INFO upskill.Xml : 56 - Renaming completed.
+04.02.2021 15:31:35 [main] INFO upskill.XmlSave : 70 - File [resultDom.xml] is created.
+04.02.2021 15:31:35 [main] INFO upskill.XmlSave : 106 - File [resultStax.xml] is created.
+04.02.2021 15:31:35 [main] INFO upskill.Xml : 67 - The application is finished.
+04.02.2021 15:32:57 [main] INFO upskill.Xml : 16 - The application is running.
+04.02.2021 15:33:03 [main] INFO upskill.Xml : 29 - The configuration file [config.xml] is selected.
+04.02.2021 15:33:03 [main] INFO upskill.XmlParsing : 56 - The configuration file [config.xml] is read.
+04.02.2021 15:33:09 [main] INFO upskill.Xml : 41 - Directory [D:\test\file] selected.
+04.02.2021 15:33:09 [main] INFO upskill.Xml : 56 - Renaming completed.
+04.02.2021 15:33:09 [main] INFO upskill.XmlSave : 70 - File [resultDom.xml] is created.
+04.02.2021 15:33:09 [main] INFO upskill.XmlSave : 106 - File [resultStax.xml] is created.
+04.02.2021 15:33:09 [main] INFO upskill.Xml : 67 - The application is finished.

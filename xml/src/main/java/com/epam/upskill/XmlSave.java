@@ -8,14 +8,18 @@ import org.w3c.dom.Element;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.stream.XMLOutputFactory;
 
+import javax.xml.stream.XMLStreamException;
 import javax.xml.stream.XMLStreamWriter;
 import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
 import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.FileWriter;
+import java.io.IOException;
 
 public class XmlSave {
     private static Logger logger = LogManager.getLogger();
@@ -41,13 +45,13 @@ public class XmlSave {
 
             Element old_file = doc.createElement("old_file");
             rootElement.appendChild(old_file);
-            Element new_name = doc.createElement("name");
+            Element new_name = doc.createElement(Constant.TAG_NAME);
             new_name.setTextContent(oldFile);
             old_file.appendChild(new_name);
 
             Element new_file = doc.createElement("new_file");
             rootElement.appendChild(new_file);
-            Element old_name = doc.createElement("name");
+            Element old_name = doc.createElement(Constant.TAG_NAME);
             old_name.setTextContent(newFile);
             new_file.appendChild(old_name);
 
@@ -55,12 +59,12 @@ public class XmlSave {
             Transformer t = tf.newTransformer();
             DOMSource source = new DOMSource(doc);
             StreamResult sr;
-            sr = new StreamResult("src\\main\\resources\\resultDom.xml");
+            sr = new StreamResult(Constant.PATH_FILE_XML_DOM);
             t.transform(source, sr);
             sr = new StreamResult(System.out);
             t.transform(source, sr);
             System.out.println();
-        } catch (Exception e) {
+        } catch (ParserConfigurationException | TransformerException e) {
             logger.log(Level.ERROR, "The XML file is not created", e);
         }
         logger.log(Level.INFO, "File [resultDom.xml] is created.");
@@ -69,7 +73,7 @@ public class XmlSave {
     public void xmlSaveStax(String nameConfig, String leadTime, String oldFile, String newFile) {
         try {
             XMLOutputFactory outputFactory = XMLOutputFactory.newInstance();
-            FileWriter fileWriter = new FileWriter("src\\main\\resources\\resultStax.xml");
+            FileWriter fileWriter = new FileWriter(Constant.PATH_FILE_XML_STAX);
             XMLStreamWriter writer = outputFactory.createXMLStreamWriter(fileWriter);
 
             writer.writeStartDocument("UTF-8", "1.0");
@@ -83,12 +87,12 @@ public class XmlSave {
             writer.writeEndElement();
             writer.writeEndElement();
             writer.writeStartElement("old_file");
-            writer.writeStartElement("name");
+            writer.writeStartElement(Constant.TAG_NAME);
             writer.writeCharacters(oldFile);
             writer.writeEndElement();
             writer.writeEndElement();
             writer.writeStartElement("new_file");
-            writer.writeStartElement("name");
+            writer.writeStartElement(Constant.TAG_NAME);
             writer.writeCharacters(newFile);
             writer.writeEndElement();
             writer.writeEndElement();
@@ -96,7 +100,7 @@ public class XmlSave {
             writer.writeEndDocument();
             writer.flush();
             writer.close();
-        } catch (Exception e) {
+        } catch (XMLStreamException | IOException e) {
             logger.log(Level.ERROR, "The XML file is not created", e);
         }
         logger.log(Level.INFO, "File [resultStax.xml] is created.");

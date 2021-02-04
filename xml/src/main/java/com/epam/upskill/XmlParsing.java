@@ -39,7 +39,7 @@ public class XmlParsing {
         }
 
         String newXml = new String(xml);
-        String tag = "<" + "suffix" + ">";
+        String tag = "<" + Constant.SUFFIX + ">";
         int start = newXml.indexOf(tag);
         if (start < 0) {
             logger.log(Level.ERROR, "Suffix not found.");
@@ -47,7 +47,7 @@ public class XmlParsing {
         } else {
             start += tag.length();
         }
-        int end = newXml.lastIndexOf("</" + "suffix" + ">");
+        int end = newXml.lastIndexOf("</" + Constant.SUFFIX + ">");
         if (end < 0) {
             logger.log(Level.ERROR, "Suffix not found.");
             return "";
@@ -69,11 +69,11 @@ public class XmlParsing {
                 Node node = nl.item(i);
                 if (node.getNodeType() == Node.ELEMENT_NODE) {
                     Element element = (Element) node;
-                    suffix = element.getElementsByTagName("suffix").item(0).getChildNodes().item(0).getNodeValue();
+                    suffix = element.getElementsByTagName(Constant.SUFFIX).item(0).getChildNodes().item(0).getNodeValue();
                 }
             }
-        } catch (ParserConfigurationException | SAXException | IOException | NullPointerException e) {
-            logger.log(Level.ERROR, "Suffix not found.");
+        } catch (ParserConfigurationException | SAXException | IOException  e) {
+            logger.log(Level.ERROR, "Suffix not found.", e);
             e.printStackTrace();
         }
         logger.log(Level.INFO, "The configuration file [" + nameConfig + "] is read.");
@@ -89,8 +89,8 @@ public class XmlParsing {
             SaxParsing handler = new SaxParsing();
             saxParser.parse(path, handler);
             suffix = handler.getSuffix();
-        } catch (Exception e) {
-            logger.log(Level.ERROR, "Suffix not found.");
+        } catch (ParserConfigurationException | SAXException | IOException e) {
+            logger.log(Level.ERROR, "Suffix not found.", e);
             e.printStackTrace();
         }
         logger.log(Level.INFO, "The configuration file [" + nameConfig + "] is read.");
