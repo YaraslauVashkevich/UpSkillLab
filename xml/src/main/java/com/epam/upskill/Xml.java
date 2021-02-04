@@ -6,15 +6,18 @@ import org.apache.logging.log4j.Logger;
 
 import javax.swing.*;
 import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
-public class Logging {
+public class Xml {
     private static Logger logger = LogManager.getLogger();
 
     public static void main(String[] args) {
         logger.log(Level.INFO, "The application is running.");
+        String nameConfig = "";
+        String leadTime = "";
+        StringBuilder oldFile = new StringBuilder();
+        StringBuilder newFile = new StringBuilder();
 
         JFileChooser choiceFile = new JFileChooser();
         choiceFile.setDialogTitle("Open file configuration");
@@ -22,25 +25,11 @@ public class Logging {
         if (selected == JFileChooser.APPROVE_OPTION) {
             File selectFile = choiceFile.getSelectedFile();
             String path = selectFile.getAbsolutePath();
-            logger.log(Level.INFO, "The configuration file is selected.");
+            nameConfig = selectFile.getName();
+            logger.log(Level.INFO, "The configuration file [" + nameConfig + "] is selected.");
 
-            StringBuilder suffix = new StringBuilder();
-            try {
-                FileReader in = new FileReader(path);
-                int ch = in.read();
-                while (ch != -1) {
-                    suffix = suffix.append((char) ch);
-                    ch = in.read();
-                }
-                in.close();
-            } catch (FileNotFoundException e) {
-                JOptionPane.showMessageDialog(null, "Configuration file not found!");
-                logger.log(Level.ERROR, "Configuration file not found.", e);
-            } catch (IOException e) {
-                JOptionPane.showMessageDialog(null, "Error!");
-                logger.log(Level.ERROR, "Error file.", e);
-            }
-            logger.log(Level.INFO, "The configuration file is read.");
+            XmlParsing xmlParsing = new XmlParsing();
+            String suffix = xmlParsing.getSuffixDom(path, nameConfig);
 
             JFileChooser choiceDirectory = new JFileChooser();
             choiceDirectory.setDialogTitle("Open directory");
@@ -49,7 +38,7 @@ public class Logging {
             if (result == JFileChooser.APPROVE_OPTION) {
                 File selectDirectory = choiceDirectory.getSelectedFile();
                 String pathDirectory = selectDirectory.getAbsolutePath();
-                logger.log(Level.INFO, "Directory selected.");
+                logger.log(Level.INFO, "Directory [" + pathDirectory + "] selected.");
 
                 File directory = new File(pathDirectory);
                 File[] files = directory.listFiles();
@@ -60,12 +49,23 @@ public class Logging {
                         StringBuilder newName = new StringBuilder(name);
                         newName = newName.insert(i, suffix);
                         file.renameTo(new File(pathDirectory + "/" + newName));
-                        System.out.println(name + " --> " + newName);
+                        oldFile = oldFile.append(name + "/");
+                        newFile = newFile.append(newName + "/");
                     }
                 }
                 logger.log(Level.INFO, "Renaming completed.");
             }
         }
+        String oldFiles = new String(oldFile);
+        String newFiles = new String(newFile);
+        Date data = new Date();
+        SimpleDateFormat format = new SimpleDateFormat(Constant.DATE_FORMAT);
+        leadTime = format.format(data);
+        XmlSave xmlSave = new XmlSave();
+        xmlSave.xmlSave(nameConfig, leadTime, oldFiles, newFiles);
+        xmlSave.xmlSaveStax(nameConfig, leadTime, oldFiles, newFiles);
         logger.log(Level.INFO, "The application is finished.");
     }
+
 }
+

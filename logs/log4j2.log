@@ -1,26 +1,168 @@
-26.01.2021 12:11:36 [main]  INFO  upskill.Main : 16 - The application is running.
-26.01.2021 12:11:58 [main]  INFO  upskill.Main : 24 - The configuration file is selected.
-26.01.2021 12:11:58 [main]  INFO  upskill.Main : 42 - The configuration file is read.
-26.01.2021 12:12:12 [main]  INFO  upskill.Main : 51 - Directory selected.
-26.01.2021 12:12:12 [main]  INFO  upskill.Main : 65 - Renaming completed.
-26.01.2021 12:12:12 [main]  INFO  upskill.Main : 68 - The application is finished.
-26.01.2021 12:27:33 [main]  INFO  upskill.Main : 16 - The application is running.
-26.01.2021 12:28:02 [main]  INFO  upskill.Main : 24 - The configuration file is selected.
-26.01.2021 12:28:02 [main]  INFO  upskill.Main : 42 - The configuration file is read.
-26.01.2021 12:28:29 [main]  INFO  upskill.Main : 51 - Directory selected.
-26.01.2021 12:28:29 [main]  INFO  upskill.Main : 65 - Renaming completed.
-26.01.2021 12:28:29 [main]  INFO  upskill.Main : 68 - The application is finished.
-26.01.2021 12:32:08 [main]  INFO  upskill.Main : 16 - The application is running.
-26.01.2021 12:32:16 [main]  INFO  upskill.Main : 24 - The configuration file is selected.
-26.01.2021 12:32:16 [main]  INFO  upskill.Main : 42 - The configuration file is read.
-26.01.2021 12:32:23 [main]  INFO  upskill.Main : 51 - Directory selected.
-26.01.2021 12:32:23 [main]  INFO  upskill.Main : 65 - Renaming completed.
-26.01.2021 12:32:23 [main]  INFO  upskill.Main : 68 - The application is finished.
-27.01.2021 02:06:06 [main]  INFO  upskill.Logging : 16 - The application is running.
-27.01.2021 02:06:11 [main]  INFO  upskill.Logging : 68 - The application is finished.
-27.01.2021 02:10:45 [main]  INFO  upskill.Logging : 16 - The application is running.
-27.01.2021 02:10:53 [main]  INFO  upskill.Logging : 24 - The configuration file is selected.
-27.01.2021 02:10:53 [main]  INFO  upskill.Logging : 42 - The configuration file is read.
-27.01.2021 02:11:02 [main]  INFO  upskill.Logging : 51 - Directory selected.
-27.01.2021 02:11:02 [main]  INFO  upskill.Logging : 65 - Renaming completed.
-27.01.2021 02:11:02 [main]  INFO  upskill.Logging : 68 - The application is finished.
+03.02.2021 23:50:27 [main] INFO upskill.Xml : 16 - The application is running.
+03.02.2021 23:50:33 [main] INFO upskill.Xml : 29 - The configuration file [config.xml] is selected.
+03.02.2021 23:50:33 [main] INFO upskill.XmlParsing : 79 - The configuration file [config.xml] is read.
+03.02.2021 23:50:47 [main] INFO upskill.Xml : 41 - Directory [D:\test\file] selected.
+03.02.2021 23:50:47 [main] INFO upskill.Xml : 56 - Renaming completed.
+03.02.2021 23:50:48 [main] INFO upskill.XmlSave : 66 - File resultDom.xml is created.
+03.02.2021 23:50:48 [main] INFO upskill.XmlSave : 102 - File resultStax.xml is created.
+03.02.2021 23:50:48 [main] INFO upskill.Xml : 67 - The application is finished.
+03.02.2021 23:52:03 [main] INFO upskill.Xml : 16 - The application is running.
+03.02.2021 23:52:08 [main] INFO upskill.Xml : 29 - The configuration file [config.xml] is selected.
+03.02.2021 23:52:08 [main] INFO upskill.XmlParsing : 56 - The configuration file [config.xml] is read.
+03.02.2021 23:52:16 [main] INFO upskill.Xml : 42 - Directory [D:\test\file] selected.
+03.02.2021 23:52:16 [main] INFO upskill.Xml : 57 - Renaming completed.
+03.02.2021 23:52:16 [main] INFO upskill.XmlSave : 66 - File [resultDom.xml] is created.
+03.02.2021 23:52:16 [main] INFO upskill.XmlSave : 102 - File [resultStax.xml] is created.
+03.02.2021 23:52:16 [main] INFO upskill.Xml : 68 - The application is finished.
+03.02.2021 23:52:53 [main] INFO upskill.Xml : 16 - The application is running.
+03.02.2021 23:52:59 [main] INFO upskill.Xml : 29 - The configuration file [config.xml] is selected.
+03.02.2021 23:52:59 [main] INFO upskill.XmlParsing : 96 - The configuration file [config.xml] is read.
+03.02.2021 23:53:10 [main] INFO upskill.Xml : 42 - Directory [D:\test\file] selected.
+03.02.2021 23:53:10 [main] INFO upskill.Xml : 57 - Renaming completed.
+03.02.2021 23:53:10 [main] INFO upskill.XmlSave : 66 - File [resultDom.xml] is created.
+03.02.2021 23:53:10 [main] INFO upskill.XmlSave : 102 - File [resultStax.xml] is created.
+03.02.2021 23:53:10 [main] INFO upskill.Xml : 68 - The application is finished.
+{
+  "instant" : {
+    "epochSecond" : 1612385769,
+    "nanoOfSecond" : 836130600
+  },
+  "thread" : "main",
+  "level" : "INFO",
+  "loggerName" : "com.epam.upskill.Xml",
+  "message" : "The application is running.",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 1,
+  "threadPriority" : 5
+}
+{
+  "instant" : {
+    "epochSecond" : 1612385779,
+    "nanoOfSecond" : 892649300
+  },
+  "thread" : "main",
+  "level" : "INFO",
+  "loggerName" : "com.epam.upskill.Xml",
+  "message" : "The configuration file [config.xml] is selected.",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 1,
+  "threadPriority" : 5
+}
+{
+  "instant" : {
+    "epochSecond" : 1612385779,
+    "nanoOfSecond" : 897645900
+  },
+  "thread" : "main",
+  "level" : "INFO",
+  "loggerName" : "com.epam.upskill.XmlParsing",
+  "message" : "The configuration file [config.xml] is read.",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 1,
+  "threadPriority" : 5
+}
+{
+  "instant" : {
+    "epochSecond" : 1612385786,
+    "nanoOfSecond" : 729757300
+  },
+  "thread" : "main",
+  "level" : "INFO",
+  "loggerName" : "com.epam.upskill.Xml",
+  "message" : "Directory [D:\\test\\file] selected.",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 1,
+  "threadPriority" : 5
+}
+{
+  "instant" : {
+    "epochSecond" : 1612385786,
+    "nanoOfSecond" : 732754300
+  },
+  "thread" : "main",
+  "level" : "INFO",
+  "loggerName" : "com.epam.upskill.Xml",
+  "message" : "Renaming completed.",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 1,
+  "threadPriority" : 5
+}
+{
+  "instant" : {
+    "epochSecond" : 1612385786,
+    "nanoOfSecond" : 825697700
+  },
+  "thread" : "main",
+  "level" : "INFO",
+  "loggerName" : "com.epam.upskill.XmlSave",
+  "message" : "File [resultDom.xml] is created.",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 1,
+  "threadPriority" : 5
+}
+{
+  "instant" : {
+    "epochSecond" : 1612385786,
+    "nanoOfSecond" : 837691100
+  },
+  "thread" : "main",
+  "level" : "INFO",
+  "loggerName" : "com.epam.upskill.XmlSave",
+  "message" : "File [resultStax.xml] is created.",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 1,
+  "threadPriority" : 5
+}
+{
+  "instant" : {
+    "epochSecond" : 1612385786,
+    "nanoOfSecond" : 837691100
+  },
+  "thread" : "main",
+  "level" : "INFO",
+  "loggerName" : "com.epam.upskill.Xml",
+  "message" : "The application is finished.",
+  "endOfBatch" : false,
+  "loggerFqcn" : "org.apache.logging.log4j.spi.AbstractLogger",
+  "threadId" : 1,
+  "threadPriority" : 5
+}
+03.02.2021 23:57:09 [main] INFO upskill.Xml : 16 - The application is running.
+03.02.2021 23:57:15 [main] INFO upskill.Xml : 29 - The configuration file [config.xml] is selected.
+03.02.2021 23:57:15 [main] INFO upskill.XmlParsing : 79 - The configuration file [config.xml] is read.
+03.02.2021 23:57:25 [main] INFO upskill.Xml : 41 - Directory [D:\test\file] selected.
+03.02.2021 23:57:25 [main] INFO upskill.Xml : 56 - Renaming completed.
+03.02.2021 23:57:25 [main] INFO upskill.XmlSave : 66 - File [resultDom.xml] is created.
+03.02.2021 23:57:25 [main] INFO upskill.XmlSave : 102 - File [resultStax.xml] is created.
+03.02.2021 23:57:25 [main] INFO upskill.Xml : 67 - The application is finished.
+04.02.2021 15:27:56 [main] INFO upskill.Xml : 16 - The application is running.
+04.02.2021 15:28:08 [main] INFO upskill.Xml : 29 - The configuration file [config.xml] is selected.
+04.02.2021 15:28:08 [main] INFO upskill.XmlParsing : 79 - The configuration file [config.xml] is read.
+04.02.2021 15:28:16 [main] INFO upskill.Xml : 41 - Directory [D:\test\file] selected.
+04.02.2021 15:28:16 [main] INFO upskill.Xml : 56 - Renaming completed.
+04.02.2021 15:28:16 [main] INFO upskill.XmlSave : 70 - File [resultDom.xml] is created.
+04.02.2021 15:28:16 [main] INFO upskill.XmlSave : 106 - File [resultStax.xml] is created.
+04.02.2021 15:28:16 [main] INFO upskill.Xml : 67 - The application is finished.
+04.02.2021 15:30:55 [main] INFO upskill.Xml : 16 - The application is running.
+04.02.2021 15:31:20 [main] INFO upskill.Xml : 29 - The configuration file [config.xml] is selected.
+04.02.2021 15:31:20 [main] INFO upskill.XmlParsing : 96 - The configuration file [config.xml] is read.
+04.02.2021 15:31:35 [main] INFO upskill.Xml : 41 - Directory [C:\test\file] selected.
+04.02.2021 15:31:35 [main] INFO upskill.Xml : 56 - Renaming completed.
+04.02.2021 15:31:35 [main] INFO upskill.XmlSave : 70 - File [resultDom.xml] is created.
+04.02.2021 15:31:35 [main] INFO upskill.XmlSave : 106 - File [resultStax.xml] is created.
+04.02.2021 15:31:35 [main] INFO upskill.Xml : 67 - The application is finished.
+04.02.2021 15:32:57 [main] INFO upskill.Xml : 16 - The application is running.
+04.02.2021 15:33:03 [main] INFO upskill.Xml : 29 - The configuration file [config.xml] is selected.
+04.02.2021 15:33:03 [main] INFO upskill.XmlParsing : 56 - The configuration file [config.xml] is read.
+04.02.2021 15:33:09 [main] INFO upskill.Xml : 41 - Directory [D:\test\file] selected.
+04.02.2021 15:33:09 [main] INFO upskill.Xml : 56 - Renaming completed.
+04.02.2021 15:33:09 [main] INFO upskill.XmlSave : 70 - File [resultDom.xml] is created.
+04.02.2021 15:33:09 [main] INFO upskill.XmlSave : 106 - File [resultStax.xml] is created.
+04.02.2021 15:33:09 [main] INFO upskill.Xml : 67 - The application is finished.

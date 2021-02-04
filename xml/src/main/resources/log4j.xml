@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="info">
+    <Properties>
+        <Property name="LOG_DIR">logs</Property>
+        <Property name="ARCHIVE_LOG_DIR">${LOG_DIR}/archive</Property>
+    </Properties>
+    <ThresholdFilter level="trace"/>
+    <Appenders>
+        <Console name="console" target="SYSTEM_OUT">
+            <JsonLayout eventEOL="true" compact="true"/>
+        </Console>
+        <File name="logFile" fileName="${LOG_DIR}/log4j2.log" bufferedIO="true">
+            <JSONLayout objectMessageAsJsonObject="true"/>
+        </File>
+    </Appenders>
+    <Loggers>
+        <Logger name="log_file" additivity="false">
+            <AppenderRef ref="logFile"/>
+        </Logger>
+        <Root level="INFO">
+            <AppenderRef ref="console"/>
+            <AppenderRef ref="logFile"/>
+        </Root>
+    </Loggers>
+</Configuration>

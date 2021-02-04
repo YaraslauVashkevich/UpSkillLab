@@ -42,22 +42,22 @@ public class Junit {
                 array.add(x2);
             }
         } else if (a != 0 && b == 0 && c != 0 && -c / a >= 0) {
-                double x1 = Math.sqrt(-c / a);
-                double x2 = -Math.sqrt(-c / a);
-                array.add(x1);
-                array.add(x2);
+            double x1 = Math.sqrt(-c / a);
+            double x2 = -Math.sqrt(-c / a);
+            array.add(x1);
+            array.add(x2);
         } else if (a != 0 && b == 0 && c != 0 && -c / a < 0) {
-                System.out.println("No roots");
+            System.out.println("No roots");
         } else if (a != 0 && b != 0 && c == 0) {
-                double x1 = 0;
-                double x2 = -b / a;
-                array.add(x1);
-                array.add(x2);
+            double x1 = 0;
+            double x2 = -b / a;
+            array.add(x1);
+            array.add(x2);
         } else if (a != 0 && b == 0 && c == 0) {
-                double x = 0;
-                array.add(x);
+            double x = 0;
+            array.add(x);
         } else {
-                System.out.println("Error! Coefficient a = 0.");
+            System.out.println("Error! Coefficient a = 0.");
         }
         return array;
     }
